@@ -1,12 +1,9 @@
-:export {
-  body-bg: #FAFBFE;
-}
+@import './scss//variables';
 
-* {
+* { 
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -16,8 +13,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.container {
+.container { 
   width: 80%;
   margin: 0 auto;
 }
-/*# sourceMappingURL=App.css.map */
