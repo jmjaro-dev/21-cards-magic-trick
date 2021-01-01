@@ -1,4 +1,4 @@
-@import './scss//variables';
+@import './scss/Main';
 
 * { 
   margin: 0;
@@ -9,6 +9,7 @@
 body {
   font-family: 'Jura', sans-serif;
   font-weight: bold;
+  background-color: #FAFBFE;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -16,4 +17,12 @@ body {
 .container { 
   width: 80%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  // For Small Mobile Devices
+  @media only screen and (min-width: 320px) and (max-width: 600px) {
+    width: 100%;
+  }
 }
