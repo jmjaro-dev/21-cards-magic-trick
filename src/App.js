@@ -17,7 +17,7 @@ function App() {
   const [deck, setDeck] = useState(cards);  
   const [genCards, setGenCards] = useState([]);  
   const [round, setRound] = useState(1);
-  const [instructions, setInstructions] = useState('Click the Deck of Cards to Start.');
+  const [instructions, setInstructions] = useState('Click the deck of cards to Start.');
   const [method, setMethod] =  useState(Math.floor((Math.random() * 3 )));
   let generatedCards = document.querySelectorAll('.card');
   let selectedColumn;
@@ -45,15 +45,13 @@ function App() {
       setDeck(deck);
       // sets isDeckSet to true
       setIsDeckSet(true);
-      setTimeout(() => setInstructions('Choose ONE card to remember and Click the Column Button that corresponds to where your card is.'), 6000);
-      console.log('deck is set');
+      setTimeout(() => setInstructions('Now, choose a card to remember and click the button that corresponds to the column of your card.'), 6000);
     }
 
     // Deals the Cards
     if(isStarted === true && isShuffled === true && isDeckSet === true  && areCardsReturned === true && round <= 3) {
       // Deals the cards
       dealCards(deck);
-      console.log('dealing cards');
       setAreCardsReturned(false);
     }
 
@@ -61,7 +59,6 @@ function App() {
     if(isStarted === true && isShuffled === true && isDeckSet === true  && areCardsReturned === true && round === 4 && isGameOver === false) {
       // Reveals the choosen card
       revealCard();
-      console.log('revealing card');
       setTimeout(() => setInstructions('Is this your Card?'), 4000);
       // Set isGameOver to true
       setIsGameOver(true);
@@ -74,6 +71,7 @@ function App() {
 
   const onStart = () => {
     if(isStarted === false ) {
+      setInstructions('Please wait while I\'m preparing the deck for you :)');
       setIsStarted(true);
     }
   }
@@ -88,7 +86,7 @@ function App() {
     setGenCards([]);  
     setRound(1);
     setMethod(Math.floor((Math.random() * 3 )));
-    setInstructions('Click the Deck of Cards to Start.');
+    setInstructions('Click the deck of cards to Start.');
     generatedCards = document.querySelectorAll('.card');
     // Remove Cards in UI
     generatedCards.forEach(card => card.remove());
@@ -336,7 +334,7 @@ function App() {
       if(method === 2) {
         pileOnBottom(column, deck);
       }
-      setTimeout(() => setInstructions('Where is your card now? Click the correct Column Button.'), 11500);
+      setTimeout(() => setInstructions('Where is your card now?'), 11500);
     }
 
     // ! Round 2
@@ -350,7 +348,7 @@ function App() {
       if(method === 2) {
         pileOnBottom(column, deck);
       }
-      setTimeout(() => setInstructions('Which Column is your card located now?'), 11500);
+      setTimeout(() => setInstructions('Which column is your card located now?'), 11500);
     }
 
     if(round === 3) {
@@ -371,6 +369,7 @@ function App() {
 
   const onSelectColumn = e => {
     let target;
+    setInstructions('Okay. Preparing the cards for the next round. Don\'t forget your card :)');
     hideButtons();
     
     if(e.target.tagName === "DIV") {
