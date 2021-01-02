@@ -388,6 +388,7 @@ function App() {
   return (
     <div className="App">
       <div className="container">
+        <h1 className="title" >21 Cards Magic Trick</h1>
         <Instructions instructions={instructions} />
         <PlayArea onStart={onStart} onReset={onReset} onSelectColumn={onSelectColumn}/>
       </div>

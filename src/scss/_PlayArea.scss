@@ -1,16 +1,25 @@
 #playArea {
   width: 100%;
-  margin-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
   // For Mobile Devices
-  @media only screen and (min-width: 320px) and (max-width: 600px){
+  @media only screen and (max-width: 600px){
     margin-top: 20px;
   }
+
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+    margin-top: 25px;
+  }
   
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    margin-top: 35px;
+  }
+
   .buttons-area {
     width: 100%;
     display: flex;
@@ -19,10 +28,13 @@
     height: 50px;
     margin-bottom: 25px;
     position: relative;
+
+    /* Extra large devices (large laptops and desktops, 1200px and up) */
+    @media only screen and (min-width: 1200px) {
+      margin-bottom: 35px;
+    }
     
     .deck-stacked {
-      width: 140px;
-      height: 210px;
       background: $body-bg;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       border-radius: 10px;
@@ -33,10 +45,9 @@
       z-index: 5;
       position: absolute;
       top: 75px;
-      left: 10%;
 
       // For Mobile Devices
-      @media only screen and (min-width: 320px) and (max-width: 600px){
+      @media only screen and (max-width: 600px){
         width: 70px;
         height: 95px;
         left: 5%; 
@@ -44,6 +55,40 @@
         img {
           height: 2.5em;
         }
+      }
+
+      /* Small devices (portrait tablets and large phones, 600px and up) */
+      @media only screen and (min-width: 600px) {
+        width: 120px;
+        height: 180px;
+        left: 2%; 
+
+        img {
+          height: 5.5em;
+        }
+      }
+
+      /* Medium devices (landscape tablets, 768px and up) */
+      @media only screen and (min-width: 768px) {
+        width: 130px;
+        height: 195px;
+        
+        img {
+          height: 4.4em;
+        }
+      }
+
+      /* Large devices (laptops/desktops, 992px and up) */
+      @media only screen and (min-width: 992px) {
+        width: 140px;
+        height: 210px;
+        left: 5%;
+      }
+
+      /* Extra large devices (large laptops and desktops, 1200px and up) */
+      @media only screen and (min-width: 1200px) {
+        top: 85px;
+        left: 10%;
       }
     }
 
@@ -53,7 +98,6 @@
       border: none;
       border-radius: 15px;
       width: 106px;
-      height: 46px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -65,12 +109,17 @@
       font-family: Jura, sans-serif;
       font-style: normal;
       font-weight: bold;
-      font-size: 13px;
-
+      
       // For Mobile Devices
-      @media only screen and (min-width: 320px) and (max-width: 600px){
+      @media only screen and (max-width: 600px){
         height: 36px;
         font-size: 11px;
+      }
+
+      /* Medium devices (landscape tablets, 768px and up) */
+      @media only screen and (min-width: 768px) {
+        height: 46px;
+        font-size: 13px;
       }
     }
 
@@ -78,8 +127,6 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 46px;
-      height: 46px;
       border-radius: 50%;
       background: $body-bg;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.13);
@@ -90,17 +137,42 @@
       span {
         font-style: normal;
         font-weight: bold;
-        font-size: 12px;
       }
 
       // For Mobile Devices
-      @media only screen and (min-width: 320px) and (max-width: 600px){
+      @media only screen and (max-width: 600px){
         width: 36px;
         height: 36px;
         
         span {
           font-size: 9px;
         } 
+      }
+
+      /* Small devices (portrait tablets and large phones, 600px and up) */
+      @media only screen and (min-width: 600px) {
+        width: 42px;
+        height: 42px;
+        
+        span {
+          font-size: 11px;
+        } 
+      }
+
+      /* Medium devices (landscape tablets, 768px and up) */
+      @media only screen and (min-width: 768px) {
+        width: 44px;
+        height: 44px;
+
+        span {
+          font-size: 12px;
+        }
+      }
+
+      /* Large devices (laptops/desktops, 992px and up) */
+      @media only screen and (min-width: 992px) {
+        width: 46px;
+        height: 46px;
       }
     }
   
@@ -118,7 +190,7 @@
     }
     
     // For Mobile Devices
-    @media only screen and (min-width: 320px) and (max-width: 600px){
+    @media only screen and (max-width: 600px){
       .col-btn.c1 { 
         left: 41.25%;
         transform: translateX(-41.25%);
@@ -133,6 +205,69 @@
       }  
     }
 
+    /* Small devices (portrait tablets and large phones, 600px and up) */
+    @media only screen and (min-width: 600px) {
+      .col-btn.c1 { 
+        left: 41.6%;
+        transform: translateX(-41.6%);
+      }
+      .col-btn.c2 { 
+        left: 66.95%;
+        transform: translateX(-66.95%);
+      }
+      .col-btn.c3 { 
+        left: 92.35%;
+        transform: translateX(-92.35%);
+      } 
+    }
+
+    /* Medium devices (landscape tablets, 768px and up) */
+    @media only screen and (min-width: 768px) {
+      .col-btn.c1 { 
+        left: 41.6%;
+        transform: translateX(-41.6%);
+      }
+      .col-btn.c2 { 
+        left: 67.5%;
+        transform: translateX(-67.5%);
+      }
+      .col-btn.c3 { 
+        left: 93.4%;
+        transform: translateX(-93.4%);
+      } 
+    }
+
+    /* Large devices (laptops/desktops, 992px and up) */
+    @media only screen and (min-width: 992px) {
+      .col-btn.c1 { 
+        left: 41.25%;
+        transform: translateX(-41.25%);
+      }
+      .col-btn.c2 { 
+        left: 66.5%;
+        transform: translateX(-66.5%);
+      }
+      .col-btn.c3 { 
+        left: 91.95%;
+        transform: translateX(-91.95%);
+      } 
+    }
+
+    /* Extra large devices (large laptops and desktops, 1200px and up) */
+    @media only screen and (min-width: 1200px) {
+      .col-btn.c1 { 
+        left: 41.25%;
+        transform: translateX(-41.25%);
+      }
+      .col-btn.c2 { 
+        left: 63.5%;
+        transform: translateX(-63.5%);
+      }
+      .col-btn.c3 { 
+        left: 85.75%;
+        transform: translateX(-85.75%);
+      } 
+    }
   }
 
   .cards-area {
@@ -144,28 +279,49 @@
     position: relative;
 
     // For Mobile Devices
-    @media only screen and (min-width: 320px) and (max-width: 600px){
+    @media only screen and (max-width: 600px){
       width: 100%; 
     }
 
     .card {
-      width: 140px;
-      height: 210px;
       background: $body-bg;
       position: absolute;
       border-radius: 10px;
       top: 0;
-      left: 10%;
       transition: all 0.25s ease-in-out;
       perspective: 1000px;
 
       // For Mobile Devices
-      @media only screen and (min-width: 320px) and (max-width: 600px){
+      @media only screen and (max-width: 600px){
         width: 70px;
         height: 95px; 
         left: 5%;
       }
 
+      /* Small devices (portrait tablets and large phones, 600px and up) */
+      @media only screen and (min-width: 600px) {
+        width: 120px;
+        height: 180px;
+        left: 2%; 
+      }
+
+      /* Medium devices (landscape tablets, 768px and up) */
+      @media only screen and (min-width: 768px) {
+        width: 130px;
+        height: 195px;
+      }
+
+      /* Large devices (laptops/desktops, 992px and up) */
+      @media only screen and (min-width: 992px) {
+        width: 140px;
+        height: 210px;
+        left: 5%;
+      }
+
+      /* Extra large devices (large laptops and desktops, 1200px and up) */
+      @media only screen and (min-width: 1200px) {
+        left: 10%;
+      }
 
       .flip-card {
         position: relative;
@@ -196,10 +352,12 @@
             span {
               font-style: normal;
               font-weight: bold;
-              font-size: 18px;
-              
             }
     
+            img {
+              margin-top: 2px;
+            }
+
             .red {
               color: #EF232F;
             }
@@ -207,13 +365,9 @@
             .black {
               color: #000;
             }
-    
-            img {
-              margin-top: 2px;
-            }
 
             // For Mobile Devices
-            @media only screen and (min-width: 320px) and (max-width: 600px){
+            @media only screen and (max-width: 600px){
               span {
                 font-size: 8px;
               }
@@ -222,23 +376,52 @@
                 height: 6px;
               }
             }
+
+            /* Small devices (portrait tablets and large phones, 600px and up) */
+            @media only screen and (min-width: 600px) {
+              span {
+                font-size: 14px;
+              }
+
+              img {
+                height: 12px;
+              } 
+            }
+
+            /* Medium devices (landscape tablets, 768px and up) */
+            @media only screen and (min-width: 768px) {
+              span {
+                font-size: 16px;
+              }
+
+              img {
+                height: 14px;
+              } 
+            }
+
+            /* Large devices (laptops/desktops, 992px and up) */
+            @media only screen and (min-width: 992px) {
+              span {
+                font-size: 18px;
+              }
+
+              img {
+                height: auto;
+              }
+            }
           }
     
           .top-label {
             position: absolute;
-            top: 12px;
-            left: 12px;
           }
     
           .bottom-label {
             position: absolute;
-            bottom: 12px;
-            right: 12px;
             transform: rotate(-180deg);
           }
 
           // For Mobile Devices
-          @media only screen and (min-width: 320px) and (max-width: 600px){
+          @media only screen and (max-width: 600px){
             padding: 0;
 
             .top-label {
@@ -251,6 +434,34 @@
               right: 8px;
             }
           }
+
+          /* Small devices (portrait tablets and large phones, 600px and up) */
+          @media only screen and (min-width: 600px) {
+            .top-label {
+              top: 10px;
+              left: 10px;
+            }
+      
+            .bottom-label {
+              bottom: 10px;
+              right: 10px;
+            }
+          }
+          
+          /* Medium devices (landscape tablets, 768px and up) */
+          @media only screen and (min-width: 768px) {
+            padding: 5px;
+
+            .top-label {
+              top: 12px;
+              left: 12px;
+            }
+      
+            .bottom-label {
+              bottom: 12px;
+              right: 12px;
+            }
+          }
         }
 
         .card-back {
@@ -261,165 +472,133 @@
           position: absolute;
 
           // For Mobile Devices
-          @media only screen and (min-width: 320px) and (max-width: 600px){
+          @media only screen and (max-width: 600px){
             img {
               height: 2.5em;
+            }
+          }
+
+          /* Small devices (portrait tablets and large phones, 600px and up) */
+          @media only screen and (min-width: 600px) {
+            img {
+              height: 5.5em;
+            }
+          }
+
+          /* Medium devices (landscape tablets, 768px and up) */
+          @media only screen and (min-width: 768px) {
+            img {
+              height: 4.4em;
+            }
+          }
+
+          /* Large devices (laptops/desktops, 992px and up) */
+          @media only screen and (min-width: 992px) {
+            img { 
+              height: auto;
             }
           }
         }
       }
     }
 
-    // Dealing Transition
-    .card.rd0 { 
-      top: 0; 
-      left: 40.25%;
-      transform: translateX(-40.25%); 
+    .card.rd0, .card.rd1, .card.rd2, .card.rd3, .card.rd4, .card.rd5, .card.rd6, .card.rd7, .card.rd8, .card.rd9, .card.rd10, .card.rd11, .card.rd12, .card.rd13, .card.rd14, .card.rd15, .card.rd16, .card.rd17, .card.rd18, .card.rd19, .card.rd20 {
       box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.08); 
     }
-    .card.rd1 { 
-      top: 0; 
-      left: 63%;
+    // Dealing Transition
+    .card.rd0 {  
+      transform: translateX(-40.25%); 
+    }
+    .card.rd1 {  
       transform: translateX(-63%); 
-      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.08); 
       transition-delay: 0.25s; 
     }
-    .card.rd2 { 
-      top: 0; 
+    .card.rd2 {  
       left: 85.75%;
       transform: translateX(-85.75%);  
-      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.08); 
       transition-delay: 0.5s; 
     }
-    .card.rd3 { 
-      top: 3.5em; 
-      left: 40.25%;
+    .card.rd3 {  
       transform: translateX(-40.25%); 
-      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.08); 
       transition-delay: 0.75s; 
     }
-    .card.rd4 { 
-      top: 3.5em; 
-      left: 63%;
+    .card.rd4 {  
       transform: translateX(-63%); 
-      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.08); 
       transition-delay: 1s; 
     }
-    .card.rd5 { 
-      top: 3.5em; 
+    .card.rd5 {  
       left: 85.75%;
       transform: translateX(-85.75%); 
-      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.08); 
       transition-delay: 1.25s; 
     }
     .card.rd6 { 
-      top: 7em; 
-      left: 40.25%;
       transform: translateX(-40.25%); 
-      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.08); 
       transition-delay: 1.5s; 
     }
     .card.rd7 { 
-      top: 7em; 
-      left: 63%;
       transform: translateX(-63%); 
-      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.08); 
       transition-delay: 1.75s; 
     }
     .card.rd8 { 
-      top: 7em; 
       left: 85.75%;
       transform: translateX(-85.75%); 
-      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.08); 
       transition-delay: 2s; 
     }
-    .card.rd9 { 
-      top: 10.5em; 
-      left: 40.25%;
+    .card.rd9 {
       transform: translateX(-40.25%); 
-      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.08); 
       transition-delay: 2.25s; 
     }
-    .card.rd10 { 
-      top: 10.5em; 
-      left: 63%;
+    .card.rd10 {
       transform: translateX(-63%); 
-      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.08); 
       transition-delay: 2.5s; 
     }
-    .card.rd11 { 
-      top: 10.5em; 
+    .card.rd11 {
       left: 85.75%;
       transform: translateX(-85.75%); 
-      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.08); 
       transition-delay: 2.75s; 
     }
     .card.rd12 { 
-      top: 14em; 
-      left: 40.25%;
       transform: translateX(-40.25%); 
-      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.08); 
       transition-delay: 3s; 
     }
     .card.rd13 { 
-      top: 14em; 
-      left: 63%;
       transform: translateX(-63%); 
-      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.08); 
       transition-delay: 3.25s; 
     }
     .card.rd14 { 
-      top: 14em; 
       left: 85.75%;
       transform: translateX(-85.75%); 
-      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.08); 
       transition-delay: 3.5s; 
     }
     .card.rd15 { 
-      top: 17.5em; 
-      left: 40.25%;
       transform: translateX(-40.25%); 
-      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.08); 
       transition-delay: 3.75s; 
     }
     .card.rd16 { 
-      top: 17.5em; 
-      left: 63%;
       transform: translateX(-63%); 
-      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.08); 
       transition-delay: 4s; 
     }
     .card.rd17 { 
-      top: 17.5em; 
       left: 85.75%;
       transform: translateX(-85.75%); 
-      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.08); 
       transition-delay: 4.25s; 
     }
     .card.rd18 { 
-      top: 21em; 
-      left: 40.25%;
       transform: translateX(-40.25%); 
-      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.08); 
       transition-delay: 4.5s; 
     }
     .card.rd19 { 
-      top: 21em; 
-      left: 63%;
       transform: translateX(-63%); 
-      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.08); 
       transition-delay: 4.75s; 
     }
     .card.rd20 { 
-      top: 21em; 
       left: 85.75%;
       transform: translateX(-85.75%); 
-      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.08); 
       transition-delay: 5s; 
     }
 
     // For Mobile Devices
-    @media only screen and (min-width: 320px) and (max-width: 600px){
+    @media only screen and (max-width: 600px){
       .card.rd0 { 
         left: 40.25%;
         transform: translateX(-40.25%);   
@@ -524,30 +703,460 @@
       }
     }
 
+    /* Small devices (portrait tablets and large phones, 600px and up) */
+    @media only screen and (min-width: 600px) {
+      .card.rd0 { 
+        left: 40.25%;
+        transform: translateX(-40.25%);   
+      }
+      .card.rd1 { 
+        left: 70%;
+        transform: translateX(-70%);  
+      }
+      .card.rd2 { 
+        left: 99.75%;
+        transform: translateX(-99.75%);   
+      }
+      .card.rd3 { 
+        top: 2.8em; 
+        left: 40.25%;
+        transform: translateX(-40.25%);   
+      }
+      .card.rd4 { 
+        top: 2.8em; 
+        left: 70%;
+        transform: translateX(-70%);  
+      }
+      .card.rd5 { 
+        top: 2.8em; 
+        left: 99.75%;
+        transform: translateX(-99.75%);;   
+      }
+      .card.rd6 { 
+        top: 5.6em; 
+        left: 40.25%;
+        transform: translateX(-40.25%);   
+      }
+      .card.rd7 { 
+        top: 5.6em; 
+        left: 70%;
+        transform: translateX(-70%);   
+      }
+      .card.rd8 { 
+        top: 5.6em; 
+        left: 99.75%;
+        transform: translateX(-99.75%);   
+      }
+      .card.rd9 { 
+        top: 8.4em; 
+        left: 40.25%;
+        transform: translateX(-40.25%);   
+      }
+      .card.rd10 { 
+        top: 8.4em; 
+        left: 70%;
+        transform: translateX(-70%);    
+      }
+      .card.rd11 { 
+        top: 8.4em; 
+        left: 99.75%;
+        transform: translateX(-99.75%);  
+      }
+      .card.rd12 { 
+        top: 11.2em; 
+        left: 40.25%;
+        transform: translateX(-40.25%);   
+      }
+      .card.rd13 { 
+        top: 11.2em; 
+        left: 70%;
+        transform: translateX(-70%);   
+      }
+      .card.rd14 { 
+        top: 11.2em; 
+        left: 99.75%;
+        transform: translateX(-99.75%);  
+      }
+      .card.rd15 { 
+        top: 14em; 
+        left: 40.25%;
+        transform: translateX(-40.25%);   
+      }
+      .card.rd16 { 
+        top: 14em; 
+        left: 70%;
+        transform: translateX(-70%);    
+      }
+      .card.rd17 { 
+        top: 14em; 
+        left: 99.75%;
+        transform: translateX(-99.75%);  
+      }
+      .card.rd18 { 
+        top: 16.8em; 
+        left: 40.25%;
+        transform: translateX(-40.25%);   
+      }
+      .card.rd19 { 
+        top: 16.8em; 
+        left: 70%;
+        transform: translateX(-70%);    
+      }
+      .card.rd20 { 
+        top: 16.8em; 
+        left: 99.75%;
+        transform: translateX(-99.75%);   
+      }
+    }
+
+    /* Medium devices (landscape tablets, 768px and up) */
+    @media only screen and (min-width: 768px) {
+      .card.rd0 { 
+        left: 40.25%;
+        transform: translateX(-40.25%);   
+      }
+      .card.rd1 { 
+        left: 70%;
+        transform: translateX(-70%);  
+      }
+      .card.rd2 { 
+        left: 99.75%;
+        transform: translateX(-99.75%);   
+      }
+      .card.rd3 { 
+        top: 3.1em; 
+        left: 40.25%;
+        transform: translateX(-40.25%);   
+      }
+      .card.rd4 { 
+        top: 3.1em; 
+        left: 70%;
+        transform: translateX(-70%);  
+      }
+      .card.rd5 { 
+        top: 3.1em; 
+        left: 99.75%;
+        transform: translateX(-99.75%);;   
+      }
+      .card.rd6 { 
+        top: 6.2em; 
+        left: 40.25%;
+        transform: translateX(-40.25%);   
+      }
+      .card.rd7 { 
+        top: 6.2em; 
+        left: 70%;
+        transform: translateX(-70%);   
+      }
+      .card.rd8 { 
+        top: 6.2em; 
+        left: 99.75%;
+        transform: translateX(-99.75%);   
+      }
+      .card.rd9 { 
+        top: 9.3em; 
+        left: 40.25%;
+        transform: translateX(-40.25%);   
+      }
+      .card.rd10 { 
+        top: 9.3em; 
+        left: 70%;
+        transform: translateX(-70%);    
+      }
+      .card.rd11 { 
+        top: 9.3em; 
+        left: 99.75%;
+        transform: translateX(-99.75%);  
+      }
+      .card.rd12 { 
+        top: 12.4em; 
+        left: 40.25%;
+        transform: translateX(-40.25%);   
+      }
+      .card.rd13 { 
+        top: 12.4em; 
+        left: 70%;
+        transform: translateX(-70%);   
+      }
+      .card.rd14 { 
+        top: 12.4em; 
+        left: 99.75%;
+        transform: translateX(-99.75%);  
+      }
+      .card.rd15 { 
+        top: 15.5em; 
+        left: 40.25%;
+        transform: translateX(-40.25%);   
+      }
+      .card.rd16 { 
+        top: 15.5em; 
+        left: 70%;
+        transform: translateX(-70%);    
+      }
+      .card.rd17 { 
+        top: 15.5em; 
+        left: 99.75%;
+        transform: translateX(-99.75%);  
+      }
+      .card.rd18 { 
+        top: 18.6em; 
+        left: 40.25%;
+        transform: translateX(-40.25%);   
+      }
+      .card.rd19 { 
+        top: 18.6em; 
+        left: 70%;
+        transform: translateX(-70%);    
+      }
+      .card.rd20 { 
+        top: 18.6em; 
+        left: 99.75%;
+        transform: translateX(-99.75%);   
+      }
+    }
+
+    /* Large devices (laptops/desktops, 992px and up) */
+    @media only screen and (min-width: 992px) {
+      .card.rd0 { 
+        top: 0;
+        left: 40.25%;
+        transform: translateX(-40.25%);    
+      }
+      .card.rd1 {
+        top: 0; 
+        left: 69%;
+        transform: translateX(-69%);  
+      }
+      .card.rd2 {
+        top: 0; 
+        left: 97.75%;
+        transform: translateX(-97.75%);    
+      }
+      .card.rd3 { 
+        top: 3.5em; 
+        left: 40.25%;
+        transform: translateX(-40.25%);    
+      }
+      .card.rd4 { 
+        top: 3.5em; 
+        left: 69%;
+        transform: translateX(-69%);  
+      }
+      .card.rd5 { 
+        top: 3.5em; 
+        left: 97.75%;
+        transform: translateX(-97.75%); ;   
+      }
+      .card.rd6 { 
+        top: 7em; 
+        left: 40.25%;
+        transform: translateX(-40.25%);    
+      }
+      .card.rd7 { 
+        top: 7em; 
+        left: 69%;
+        transform: translateX(-69%);   
+      }
+      .card.rd8 { 
+        top: 7em; 
+        left: 97.75%;
+        transform: translateX(-97.75%);    
+      }
+      .card.rd9 { 
+        top: 10.5em; 
+        left: 40.25%;
+        transform: translateX(-40.25%);    
+      }
+      .card.rd10 { 
+        top: 10.5em; 
+        left: 69%;
+        transform: translateX(-69%);    
+      }
+      .card.rd11 { 
+        top: 10.5em; 
+        left: 97.75%;
+        transform: translateX(-97.75%);   
+      }
+      .card.rd12 { 
+        top: 14em; 
+        left: 40.25%;
+        transform: translateX(-40.25%);    
+      }
+      .card.rd13 { 
+        top: 14em; 
+        left: 69%;
+        transform: translateX(-69%);   
+      }
+      .card.rd14 { 
+        top: 14em; 
+        left: 97.75%;
+        transform: translateX(-97.75%);   
+      }
+      .card.rd15 { 
+        top: 17.5em; 
+        left: 40.25%;
+        transform: translateX(-40.25%);    
+      }
+      .card.rd16 { 
+        top: 17.5em; 
+        left: 69%;
+        transform: translateX(-69%);    
+      }
+      .card.rd17 { 
+        top: 17.5em; 
+        left: 97.75%;
+        transform: translateX(-97.75%);   
+      }
+      .card.rd18 { 
+        top: 21em; 
+        left: 40.25%;
+        transform: translateX(-40.25%);    
+      }
+      .card.rd19 { 
+        top: 21em; 
+        left: 69%;
+        transform: translateX(-69%);    
+      }
+      .card.rd20 { 
+        top: 21em; 
+        left: 97.75%;
+        transform: translateX(-97.75%);    
+      }
+    }
+
+    /* Extra large devices (large laptops and desktops, 1200px and up) */
+    @media only screen and (min-width: 1200px) { 
+      .card.rd0 { 
+        top: 0;
+        left: 40.25%;
+        transform: translateX(-40.25%);    
+      }
+      .card.rd1 {
+        top: 0; 
+        left: 65%;
+        transform: translateX(-65%);  
+      }
+      .card.rd2 {
+        top: 0; 
+        left: 89.75%;
+        transform: translateX(-89.75%);    
+      }
+      .card.rd3 { 
+        top: 3.8em; 
+        left: 40.25%;
+        transform: translateX(-40.25%);    
+      }
+      .card.rd4 { 
+        top: 3.8em; 
+        left: 65%;
+        transform: translateX(-65%);  
+      }
+      .card.rd5 { 
+        top: 3.8em; 
+        left: 89.75%;
+        transform: translateX(-89.75%); ;   
+      }
+      .card.rd6 { 
+        top: 7.6em; 
+        left: 40.25%;
+        transform: translateX(-40.25%);    
+      }
+      .card.rd7 { 
+        top: 7.6em; 
+        left: 65%;
+        transform: translateX(-65%);   
+      }
+      .card.rd8 { 
+        top: 7.6em; 
+        left: 89.75%;
+        transform: translateX(-89.75%);    
+      }
+      .card.rd9 { 
+        top: 11.4em; 
+        left: 40.25%;
+        transform: translateX(-40.25%);    
+      }
+      .card.rd10 { 
+        top: 11.4em; 
+        left: 65%;
+        transform: translateX(-65%);    
+      }
+      .card.rd11 { 
+        top: 11.4em; 
+        left: 89.75%;
+        transform: translateX(-89.75%);   
+      }
+      .card.rd12 { 
+        top: 15.2em; 
+        left: 40.25%;
+        transform: translateX(-40.25%);    
+      }
+      .card.rd13 { 
+        top: 15.2em; 
+        left: 65%;
+        transform: translateX(-65%);   
+      }
+      .card.rd14 { 
+        top: 15.2em; 
+        left: 89.75%;
+        transform: translateX(-89.75%);   
+      }
+      .card.rd15 { 
+        top: 19em; 
+        left: 40.25%;
+        transform: translateX(-40.25%);    
+      }
+      .card.rd16 { 
+        top: 19em; 
+        left: 65%;
+        transform: translateX(-65%);    
+      }
+      .card.rd17 { 
+        top: 19em; 
+        left: 89.75%;
+        transform: translateX(-89.75%);   
+      }
+      .card.rd18 { 
+        top: 22.8em; 
+        left: 40.25%;
+        transform: translateX(-40.25%);    
+      }
+      .card.rd19 { 
+        top: 22.8em; 
+        left: 65%;
+        transform: translateX(-65%);    
+      }
+      .card.rd20 { 
+        top: 22.8em; 
+        left: 89.75%;
+        transform: translateX(-89.75%);    
+      }
+    }
+
     // Return Card Transition
-    .card.rc20 { top: 0; left: 10%; }
-    .card.rc19 { top: 0; left: 10%; transition-delay: 0.25s;}
-    .card.rc18 { top: 0; left: 10%; transition-delay: 0.5s;}
-    .card.rc17 { top: 0; left: 10%; transition-delay: 0.75s;}
-    .card.rc16 { top: 0; left: 10%; transition-delay: 1s;}
-    .card.rc15 { top: 0; left: 10%; transition-delay: 1.25s;}
-    .card.rc14 { top: 0; left: 10%; transition-delay: 1.5s;}
-    .card.rc13 { top: 0; left: 10%; transition-delay: 1.75s;}
-    .card.rc12 { top: 0; left: 10%; transition-delay: 2s;}
-    .card.rc11 { top: 0; left: 10%; transition-delay: 2.25s;}
-    .card.rc10 { top: 0; left: 10%; transition-delay: 2.5s;}
-    .card.rc9 { top: 0; left: 10%; transition-delay: 2.75s;}
-    .card.rc8 { top: 0; left: 10%; transition-delay: 3s;}
-    .card.rc7 { top: 0; left: 10%; transition-delay: 3.25s;}
-    .card.rc6 { top: 0; left: 10%; transition-delay: 3.5s;}
-    .card.rc5 { top: 0; left: 10%; transition-delay: 3.75s;}
-    .card.rc4 { top: 0; left: 10%; transition-delay: 4s;}
-    .card.rc3 { top: 0; left: 10%; transition-delay: 4.25s;}
-    .card.rc2 { top: 0; left: 10%; transition-delay: 4.5s;}
-    .card.rc1 { top: 0; left: 10%; transition-delay: 4.75s;}
-    .card.rc0 { top: 0; left: 10%; transition-delay: 5s;}
+    .card.rc20 { top: 0; }
+    .card.rc19 { top: 0; transition-delay: 0.25s;}
+    .card.rc18 { top: 0; transition-delay: 0.5s;}
+    .card.rc17 { top: 0; transition-delay: 0.75s;}
+    .card.rc16 { top: 0; transition-delay: 1s;}
+    .card.rc15 { top: 0; transition-delay: 1.25s;}
+    .card.rc14 { top: 0; transition-delay: 1.5s;}
+    .card.rc13 { top: 0; transition-delay: 1.75s;}
+    .card.rc12 { top: 0; transition-delay: 2s;}
+    .card.rc11 { top: 0; transition-delay: 2.25s;}
+    .card.rc10 { top: 0; transition-delay: 2.5s;}
+    .card.rc9 { top: 0; transition-delay: 2.75s;}
+    .card.rc8 { top: 0; transition-delay: 3s;}
+    .card.rc7 { top: 0; transition-delay: 3.25s;}
+    .card.rc6 { top: 0; transition-delay: 3.5s;}
+    .card.rc5 { top: 0; transition-delay: 3.75s;}
+    .card.rc4 { top: 0; transition-delay: 4s;}
+    .card.rc3 { top: 0; transition-delay: 4.25s;}
+    .card.rc2 { top: 0; transition-delay: 4.5s;}
+    .card.rc1 { top: 0; transition-delay: 4.75s;}
+    .card.rc0 { top: 0; transition-delay: 5s;}
     
-    @media only screen and (min-width: 320px) and (max-width: 600px){ 
+    @media only screen and (max-width: 600px){ 
       .card.rc20 { left: 5%; }
       .card.rc19 { left: 5%; }
       .card.rc18 { left: 5%; }
@@ -570,20 +1179,125 @@
       .card.rc1 { left: 5%; }
       .card.rc0 { left: 5%; }
     }
+
+    /* Small devices (portrait tablets and large phones, 600px and up) */
+    @media only screen and (min-width: 600px) {
+      .card.rc20 { left: 2%; }
+      .card.rc19 { left: 2%; }
+      .card.rc18 { left: 2%; }
+      .card.rc17 { left: 2%; }
+      .card.rc16 { left: 2%; }
+      .card.rc15 { left: 2%; }
+      .card.rc14 { left: 2%; }
+      .card.rc13 { left: 2%; }
+      .card.rc12 { left: 2%; }
+      .card.rc11 { left: 2%; }
+      .card.rc10 { left: 2%; }
+      .card.rc9 { left: 2%; }
+      .card.rc8 { left: 2%; }
+      .card.rc7 { left: 2%; }
+      .card.rc6 { left: 2%; }
+      .card.rc5 { left: 2%; }
+      .card.rc4 { left: 2%; }
+      .card.rc3 { left: 2%; }
+      .card.rc2 { left: 2%; }
+      .card.rc1 { left: 2%; }
+      .card.rc0 { left: 2%; }
+    }
+
+    /* Large devices (laptops/desktops, 992px and up) */
+    @media only screen and (min-width: 992px) {
+      .card.rc20 { left: 5%; }
+      .card.rc19 { left: 5%; }
+      .card.rc18 { left: 5%; }
+      .card.rc17 { left: 5%; }
+      .card.rc16 { left: 5%; }
+      .card.rc15 { left: 5%; }
+      .card.rc14 { left: 5%; }
+      .card.rc13 { left: 5%; }
+      .card.rc12 { left: 5%; }
+      .card.rc11 { left: 5%; }
+      .card.rc10 { left: 5%; }
+      .card.rc9 { left: 5%; }
+      .card.rc8 { left: 5%; }
+      .card.rc7 { left: 5%; }
+      .card.rc6 { left: 5%; }
+      .card.rc5 { left: 5%; }
+      .card.rc4 { left: 5%; }
+      .card.rc3 { left: 5%; }
+      .card.rc2 { left: 5%; }
+      .card.rc1 { left: 5%; }
+      .card.rc0 { left: 5%; }
+    }
+
+    /* Extra large devices (large laptops and desktops, 1200px and up) */
+    @media only screen and (min-width: 1200px) {
+      .card.rc20 { left: 10%; }
+      .card.rc19 { left: 10%; }
+      .card.rc18 { left: 10%; }
+      .card.rc17 { left: 10%; }
+      .card.rc16 { left: 10%; }
+      .card.rc15 { left: 10%; }
+      .card.rc14 { left: 10%; }
+      .card.rc13 { left: 10%; }
+      .card.rc12 { left: 10%; }
+      .card.rc11 { left: 10%; }
+      .card.rc10 { left: 10%; }
+      .card.rc9 { left: 10%; }
+      .card.rc8 { left: 10%; }
+      .card.rc7 { left: 10%; }
+      .card.rc6 { left: 10%; }
+      .card.rc5 { left: 10%; }
+      .card.rc4 { left: 10%; }
+      .card.rc3 { left: 10%; }
+      .card.rc2 { left: 10%; }
+      .card.rc1 { left: 10%; }
+      .card.rc0 { left: 10%; }
+    }
+
     // card reveal
     .card.reveal {
       top: 0; 
-      left: 43.75%;
-      transform: translateX(-43.75%); 
       box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.08);
       transition: all 3s ease-in-out;
       animation: spin 1s ease-in-out 5, 
                 reveal .8s ease-in-out 3s forwards;
 
-      @media only screen and (min-width: 320px) and (max-width: 600px){
+      @media only screen and (max-width: 600px){
         left: 40.75%;
         transform: translateX(-40.75%);
       }
+
+      /* Small devices (portrait tablets and large phones, 600px and up) */
+      @media only screen and (min-width: 600px) {
+        left: 39.5%;
+        transform: translateX(-39.5%);
+      }
+
+      /* Medium devices (landscape tablets, 768px and up) */
+      @media only screen and (min-width: 768px) {
+        left: 41.25%;
+        transform: translateX(-41.25%);
+      }
+
+      /* Large devices (laptops/desktops, 992px and up) */
+      @media only screen and (min-width: 992px) {
+        left: 42.35%;
+        transform: translateX(-42.35%);
+      }
+
+      /* Extra large devices (large laptops and desktops, 1200px and up) */
+      @media only screen and (min-width: 1200px) {
+        left: 42.5%;
+        transform: translateX(-42.5%);
+      }
+
+      /* Extra large devices (large laptops and desktops, 1200px and up) */
+      @media only screen and (min-width: 1366px) {
+        left: 43.5%;
+        transform: translateX(-43.5%);
+      }
+
       .flip-card {
         transition: all .8s ease-in-out;
         animation: reveal .8s ease-in-out 3s forwards;
