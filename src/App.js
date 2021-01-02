@@ -334,7 +334,7 @@ function App() {
       if(method === 2) {
         pileOnBottom(column, deck);
       }
-      setTimeout(() => setInstructions('Where is your card now?'), 11500);
+      setTimeout(() => setInstructions('Where is your card now?'), 11000);
     }
 
     // ! Round 2
@@ -348,7 +348,7 @@ function App() {
       if(method === 2) {
         pileOnBottom(column, deck);
       }
-      setTimeout(() => setInstructions('Which column is your card located now?'), 11500);
+      setTimeout(() => setInstructions('Which column is your card located now?'), 11000);
     }
 
     if(round === 3) {
@@ -362,15 +362,19 @@ function App() {
         pileOnBottom(column, deck);
       }
       setPileValues(column)
-      setTimeout(() => setInstructions('Okay. It\'s time to reveal your card.'), 6000);
       setRound(round + 1);
     }
   }
 
   const onSelectColumn = e => {
     let target;
-    setInstructions('Okay. Preparing the cards for the next round. Don\'t forget your card :)');
     hideButtons();
+    
+    if(round < 3) {
+      setInstructions('Okay. Preparing the cards for the next round. Don\'t forget your card :)');
+    } else {
+      setInstructions('Okay. It\'s time to reveal your card.');
+    }
     
     if(e.target.tagName === "DIV") {
       target = e.target.id[3];
