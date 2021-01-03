@@ -37,7 +37,6 @@
     .deck-stacked {
       background: $body-bg;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-      border-radius: 10px;
       cursor: pointer;
       display: flex;
       align-items: center;
@@ -50,6 +49,7 @@
       @media only screen and (max-width: 600px){
         width: 70px;
         height: 95px;
+        border-radius: 5px;
         left: 5%; 
 
         img {
@@ -61,6 +61,7 @@
       @media only screen and (min-width: 600px) {
         width: 120px;
         height: 180px;
+        border-radius: 8px;
         left: 2%; 
 
         img {
@@ -82,6 +83,7 @@
       @media only screen and (min-width: 992px) {
         width: 140px;
         height: 210px;
+        border-radius: 10px;
         left: 5%;
       }
 
@@ -286,9 +288,11 @@
     .card {
       background: $body-bg;
       position: absolute;
-      border-radius: 10px;
       top: 0;
-      transition: all 0.25s ease-in-out;
+      transition: top 0.25s ease-in-out, 
+                  left 0.25s ease-in-out,
+                  transform 0.25s ease-in-out,
+                  box-shadow 0.25s ease-in-out;
       perspective: 1000px;
 
       // For Mobile Devices
@@ -300,6 +304,7 @@
 
       /* Small devices (portrait tablets and large phones, 600px and up) */
       @media only screen and (min-width: 600px) {
+        border-radius: 5px;
         width: 120px;
         height: 180px;
         left: 2%; 
@@ -313,6 +318,7 @@
 
       /* Large devices (laptops/desktops, 992px and up) */
       @media only screen and (min-width: 992px) {
+        border-radius: 10px;
         width: 140px;
         height: 210px;
         left: 5%;
@@ -328,17 +334,46 @@
         width: 100%;
         height: 100%;
         border: 1px solid rgba(0, 0, 0, 0.1);
-        border-radius: 10px;
-        transition: transform .8s;
+        transition: transform .5s;
         transform-style: preserve-3d;
         
+
+        // For Mobile Devices
+        @media only screen and (max-width: 600px){
+          border-radius: 5px;
+        }
+
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        @media only screen and (min-width: 600px) {
+          border-radius: 8px;
+        }
+
+        /* Large devices (laptops/desktops, 992px and up) */
+        @media only screen and (min-width: 992px) {
+          border-radius: 10px;
+        }
+
         .card-front, .card-back {
           position: absolute;
           width: 100%;
           height: 100%;
           backface-visibility: hidden;
           background: $body-bg;
-          border-radius: 10px;
+
+          // For Mobile Devices
+          @media only screen and (max-width: 600px){
+            border-radius: 5px;
+          }
+
+          /* Small devices (portrait tablets and large phones, 600px and up) */
+          @media only screen and (min-width: 600px) {
+            border-radius: 8px;
+          }
+
+          /* Large devices (laptops/desktops, 992px and up) */
+          @media only screen and (min-width: 992px) {
+            border-radius: 10px;
+          }
         }
 
         .card-front {
@@ -1261,7 +1296,7 @@
       box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.08);
       transition: all 3s ease-in-out;
       animation: spin 1s ease-in-out 5, 
-                reveal .8s ease-in-out 3s forwards;
+                reveal .5s ease-in-out 3s forwards;
 
       @media only screen and (max-width: 600px){
         left: 40.75%;
@@ -1299,8 +1334,8 @@
       }
 
       .flip-card {
-        transition: all .8s ease-in-out;
-        animation: reveal .8s ease-in-out 3s forwards;
+        transition: all .5s ease-in-out;
+        animation: reveal .5s ease-in-out 3s forwards;
         
         .card-back {
           transform: rotateY(0deg);
